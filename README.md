@@ -21,7 +21,7 @@ Get Symbol Financials
 	
 	polygon-cli financials --symbol MFST
 
-Get Symbol Earnings
+#### Get Symbol Earnings
 
 	polygon-cli earnings --symbol MFST
 
@@ -54,7 +54,7 @@ Get Symbol Earnings
 
 
 
-Get Exchanges
+#### Get Exchanges
 
 	polygon-cli exchanges
 
@@ -90,7 +90,7 @@ Get Exchanges
 
 
 
-Get SymbolType Maps
+#### Get SymbolType Maps
 
 	polygon-cli symboltypes
 
