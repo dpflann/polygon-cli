@@ -25,6 +25,35 @@ Get Symbol Earnings
 
 	polygon-cli earnings --symbol MFST
 
+	  REPORT DATE |            TYPE             |          VALUE            
+	+-------------+-----------------------------+--------------------------+
+	  2018-04-26  | Fiscal Period               |                  Q3 2018  
+	              | Fiscal End Date             | 2018-03-31T00:00:00.000Z  
+	              | Actual EPS                  |                 0.950000  
+	              | Consensus EPS               |                 0.850000  
+	              | Estimated EPS               |                 0.850000  
+	              | Announce Time               |                      AMC  
+	              | Number Of Estimates         |                       14  
+	              | EPS Surprise Dollar         |                 0.100000  
+	              | Year Ago                    |                 0.730000  
+	              | Year Ago Change Percent     |                       30  
+	              | Estimated Change Percent    |                       16  
+	  ---------   | --------------------------- |       ------------------  
+	  2018-01-31  | Fiscal Period               |                  Q2 2018  
+	              | Fiscal End Date             | 2017-12-31T00:00:00.000Z  
+	              | Actual EPS                  |                 0.960000  
+	              | Consensus EPS               |                 0.860000  
+	              | Estimated EPS               |                 0.860000  
+	              | Announce Time               |                      AMC  
+	              | Number Of Estimates         |                       14  
+	              | EPS Surprise Dollar         |                 0.100000  
+	              | Year Ago                    |                 0.830000  
+	              | Year Ago Change Percent     |                       16  
+	              | Estimated Change Percent    |                        4  
+	  ---------   | --------------------------- |       ------------------  
+
+
+
 Get Exchanges
 
 	polygon-cli exchanges
@@ -64,6 +93,30 @@ Get Exchanges
 Get SymbolType Maps
 
 	polygon-cli symboltypes
+
+	  TYPE  |           DESCRIPTION             
+	+-------+----------------------------------+
+	  fdr   | Foreign Ordinary Shares           
+	  ost   | Other Security Type               
+	  adr   | American Depository Receipt       
+	  cef   | Closed-End Fund                   
+	  reit  | Real Estate Investment Trust      
+	  trak  | Tracking stock or targeted stock  
+	  rylt  | Royalty Trust                     
+	  pfd   | Preferred Stock                   
+	  fund  | Fund                              
+	  cs    | Common Stock                      
+	  etp   | Exchange Traded Product/Fund      
+	  ltdp  | Limited Partnership               
+	  mlp   | Master Limited Partnership        
+	  mf    | Mutual Fund                       
+	  sp    | Structured Product                
+	  wrt   | Equity WRT                        
+	  pub   | Public                            
+	  nyrs  | New York Registry Shares          
+	  unit  | Unit                              
+	  right | Right                             
+
 
 
 ### TODO:
