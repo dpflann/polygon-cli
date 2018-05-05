@@ -7,3 +7,9 @@ import:
 - package: github.com/nats-io/go-nats
   version: 1.4.0
 - package: github.com/polygon-io/go-schemas
+- package: github.com/parnurzeal/gorequest
+  version: ^0.2.15
+- package: github.com/moul/http2curl
+- package: github.com/olekukonko/tablewriter
+- package: github.com/leekchan/accounting
+  version: ^0.2.0

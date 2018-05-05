@@ -19,7 +19,7 @@ var RootCmd = &cobra.Command{
 	Short: "polygon-cli utility",
 	Long: "polygon-cli is a console util tool to access Polygon APIs\n",
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Running Command..")
+		// fmt.Println("Running Command..")
 	},
 }
 
@@ -40,16 +40,12 @@ func init(){
 
 
 func initConfig(){
-	fmt.Println("init config")
-	if cfgFile != "" { // enable ability to specify config file via flag
+	if cfgFile != "" {
 		viper.SetConfigFile(cfgFile)
 	}
-
 	viper.SetConfigName(".polygon-cli")
 	viper.AddConfigPath("$HOME")
 	viper.AutomaticEnv()
-
-	// If a config file is found, read it in.
 	if err := viper.ReadInConfig(); err == nil {
 		fmt.Println("Using config file:", viper.ConfigFileUsed())
 	}
