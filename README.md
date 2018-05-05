@@ -5,7 +5,7 @@ Required args:
 
 	--apiKey=YOUR_API_KEY
 
-## Streams
+# Streams
 You can stream channels: 
 - Trades `T.*`
 - Quotes `Q.*`
@@ -15,11 +15,53 @@ For example, to stream all Trade ticks:
 	
 	polygon-cli stream --channel T.*
 
-## Metadata 
+# Metadata 
 
-Get Symbol Financials
+#### Get Symbol Financials
 	
 	polygon-cli financials --symbol MFST
+
+	  REPORT DATE |            TYPE             |       VALUE         
+	+-------------+-----------------------------+--------------------+
+	  2018-03-31  | Gross Profit                | $17,550,000,000     
+	              | Cost of Revenue             | $9,269,000,000      
+	              | Operating Revenue           | $26,819,000,000     
+	              | Total Revenue               | $26,819,000,000     
+	              | Operating Income            | $8,292,000,000      
+	              | Net Income                  | $7,424,000,000      
+	              | R & D                       | $3,715,000,000      
+	              | Operating Expenses          | $9,258,000,000      
+	              | Current Assets              | $156,659,000,000    
+	              | Total Assets                | $245,497,000,000    
+	              | Total Liabilities           | $0                  
+	              | Current Cash                | $9,221,000,000      
+	              | Current Debt                | $3,677,000,000      
+	              | Total Cash                  | $132,270,000,000    
+	              | Shareholder Equity          | $79,239,000,000     
+	              | Cash Change                 | -$3,663,000,000     
+	              | Cash Flow                   | $12,151,000,000     
+	              | Operating Gains Losses      | -$347,000,000       
+	    --------- | --------------------------- | ------------------  
+	  2017-12-31  | Gross Profit                | $17,854,000,000     
+	              | Cost of Revenue             | $11,064,000,000     
+	              | Operating Revenue           | $28,918,000,000     
+	              | Total Revenue               | $28,918,000,000     
+	              | Operating Income            | $8,679,000,000      
+	              | Net Income                  | -$6,302,000,000     
+	              | R & D                       | $3,504,000,000      
+	              | Operating Expenses          | $9,175,000,000      
+	              | Current Assets              | $167,633,000,000    
+	              | Total Assets                | $256,003,000,000    
+	              | Total Liabilities           | $177,643,000,000    
+	              | Current Cash                | $12,859,000,000     
+	              | Current Debt                | $15,912,000,000     
+	              | Total Cash                  | $142,780,000,000    
+	              | Shareholder Equity          | $78,360,000,000     
+	              | Cash Change                 | $5,992,000,000      
+	              | Cash Flow                   | $7,875,000,000      
+	              | Operating Gains Losses      | -$1,749,000,000     
+	    --------- | --------------------------- | ------------------  
+
 
 #### Get Symbol Earnings
 
