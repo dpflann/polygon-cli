@@ -13,7 +13,25 @@ You can stream channels:
 
 For example, to stream all Trade ticks:
 	
-	polygon-cli --apiKey=YOUR_API_KEY stream --channel=T.*
+	polygon-cli stream --channel T.*
+
+## Metadata 
+
+Get Symbol Financials
+	
+	polygon-cli financials --symbol MFST
+
+Get Symbol Earnings
+
+	polygon-cli earnings --symbol MFST
+
+Get Exchanges
+
+	polygon-cli exchanges
+
+Get SymbolType Maps
+
+	polygon-cli symboltypes
 
 
 ### TODO:
