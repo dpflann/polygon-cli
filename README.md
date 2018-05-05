@@ -192,6 +192,37 @@ You can stream channels:
 
 
 
+#### Get Crypto Exchanges
+
+	polygon-cli cryptoexchanges
+	
+	  ID |    NAME    |   TYPE   | MARKET |                URL                  
+	+----+------------+----------+--------+------------------------------------+
+	   1 | GDAX       | exchange | crypto | https://www.gdax.com/               
+	   2 | BITFINEX   | exchange | crypto | https://www.bitfinex.com/           
+	   3 | BitMEX     | exchange | crypto | https://www.bitmex.com/             
+	   4 | Binance    | exchange | crypto | https://www.binance.com/            
+	   5 | Binance    | exchange | crypto | https://gemini.com/                 
+	   6 | Bitstamp   | exchange | crypto | https://www.bitstamp.net/           
+	   7 | POLONIEX   | exchange | crypto | https://poloniex.com/               
+	   8 | CEXIO      | exchange | crypto | https://cex.io/                     
+	   9 | BitBay     | exchange | crypto | https://bitbay.net/en               
+	  10 | HitBTC     | exchange | crypto | https://hitbtc.com/                 
+	  11 | Huobi      | exchange | crypto | https://www.huobi.pro/              
+	  12 | bitFlyer   | exchange | crypto | https://bitflyer.com/en-us/         
+	  13 | Luno       | exchange | crypto | https://www.luno.com/en/            
+	  14 | Coin Mate  | exchange | crypto | https://coinmate.io/                
+	  15 | OKCoin     | exchange | crypto | https://www.okcoin.com/lang/en-US/  
+	  16 | WEX        | exchange | crypto | https://wex.nz/                     
+	  17 | OKEx       | exchange | crypto | https://www.okex.com/               
+	  18 | BL3P       | exchange | crypto | https://bl3p.eu/                    
+	  19 | BTCMarkets | exchange | crypto | https://www.btcmarkets.net/         
+	  20 | CCEX       | exchange | crypto | https://c-cex.com/                  
+	  21 | Coincheck  | exchange | crypto | https://coincheck.com/              
+	  22 | coinfloor  | exchange | crypto | https://www.coinfloor.co.uk/        
+
+
+
 
 
 #### Get SymbolType Maps

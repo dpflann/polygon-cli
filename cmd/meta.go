@@ -55,6 +55,28 @@ var exchangesCmd = &cobra.Command{
 }
 
 
+
+// Exchanges:
+var cryptoExchangesCmd = &cobra.Command{
+	Use: "cryptoexchanges",
+	Short: "Get the list of Crypto Exchanges",
+	Run: func(cmd *cobra.Command, args []string) {
+		var exchanges []schemas.CryptoExchange
+		getUrl( "https://api.polygon.io/v1/meta/crypto-exchanges", &exchanges )
+		table := tablewriter.NewWriter(os.Stdout)
+		table.SetColWidth( 60 )
+		table.SetBorder(false)
+		table.SetHeader([]string{"ID", "Name", "Type", "Market", "url"})
+		for _, exch := range exchanges {
+			table.Append([]string{ strconv.Itoa( exch.ID ), exch.Name, exch.Type, exch.Market, exch.URL })
+		}
+		println("")
+		table.Render()
+		println("")
+	},
+}
+
+
 var symbolTypesCmd = &cobra.Command{
 	Use: "symboltypes",
 	Short: "Get the map for symbol types",
@@ -188,6 +210,7 @@ var symbolDividendsCmd = &cobra.Command{
 
 func init() {
 	RootCmd.AddCommand(exchangesCmd)
+	RootCmd.AddCommand(cryptoExchangesCmd)
 	RootCmd.AddCommand(symbolTypesCmd)
 	RootCmd.AddCommand(symbolFinancialsCmd)
 	RootCmd.AddCommand(symbolEarningsCmd)
