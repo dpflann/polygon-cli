@@ -48,7 +48,9 @@ var exchangesCmd = &cobra.Command{
 		for _, exch := range exchanges {
 			table.Append([]string{ strconv.Itoa( exch.ID ), exch.Name, exch.Tape, exch.Type, exch.Market, exch.MIC })
 		}
+		println("")
 		table.Render()
+		println("")
 	},
 }
 
@@ -66,7 +68,9 @@ var symbolTypesCmd = &cobra.Command{
 		for k, v := range symbolTypes {
 			table.Append([]string{ k, v })
 		}
+		println("")
 		table.Render()
+		println("")
 	},
 }
 
