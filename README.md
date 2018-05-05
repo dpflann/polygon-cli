@@ -1,4 +1,4 @@
-# Polycon CLI
+# Polygon CLI
 CLI For simple Polygon.io functions.
 
 Required args:
@@ -7,9 +7,9 @@ Required args:
 
 ## Streams
 You can stream channels: 
-- Trades
-- Quotes
-- Currencies
+- Trades `T.*`
+- Quotes `Q.*`
+- Currencies `C.*`
 
 For example, to stream all Trade ticks:
 	
