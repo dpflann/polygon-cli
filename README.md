@@ -11,9 +11,46 @@ You can stream channels:
 - Quotes `Q.*`
 - Currencies `C.*`
 
-For example, to stream all Trade ticks:
+#### Streaming Quotes
 	
+	polygon-cli stream --channel Q.*
+	Symbol:  NTNX 	 Bid: 54.39 	 Ask:  54.62 	 BidExch:  12 	 AskExch:  12 	 BidSize:  2 	 AskSize:  2 	 Timestamp:  1525477920173
+	Symbol:  NTNX 	 Bid: 54.62 	 Ask:  54.63 	 BidExch:  12 	 AskExch:  11 	 BidSize:  8 	 AskSize:  3 	 Timestamp:  1525477920173
+	Symbol:  TVIX 	 Bid: 6.77 	 Ask:  6.79 	 BidExch:  8 	 AskExch:  8 	 BidSize:  10 	 AskSize:  48 	 Timestamp:  1525477921622
+	Symbol:  KOSS 	 Bid: 1.8 	 Ask:  2.14 	 BidExch:  8 	 AskExch:  11 	 BidSize:  14 	 AskSize:  2 	 Timestamp:  1525477923597
+	Symbol:  NTNX 	 Bid: 54.62 	 Ask:  54.63 	 BidExch:  12 	 AskExch:  11 	 BidSize:  3 	 AskSize:  3 	 Timestamp:  1525477924533
+	Symbol:  NTNX 	 Bid: 54.39 	 Ask:  54.63 	 BidExch:  12 	 AskExch:  11 	 BidSize:  2 	 AskSize:  3 	 Timestamp:  1525477924533
+	Symbol:  NVDA 	 Bid: 239.85 	 Ask:  239.99 	 BidExch:  11 	 AskExch:  12 	 BidSize:  5 	 AskSize:  7 	 Timestamp:  1525477924706
+	Symbol:  NTNX 	 Bid: 54.39 	 Ask:  54.62 	 BidExch:  12 	 AskExch:  12 	 BidSize:  2 	 AskSize:  2 	 Timestamp:  1525477924541
+	Symbol:  NTNX 	 Bid: 54.39 	 Ask:  54.63 	 BidExch:  12 	 AskExch:  11 	 BidSize:  2 	 AskSize:  3 	 Timestamp:  1525477925750
+	Symbol:  DRRX 	 Bid: 1.78 	 Ask:  2.49 	 BidExch:  8 	 AskExch:  11 	 BidSize:  1 	 AskSize:  68 	 Timestamp:  1525477925550
+	Symbol:  GUSH 	 Bid: 32.9 	 Ask:  33.24 	 BidExch:  8 	 AskExch:  8 	 BidSize:  7 	 AskSize:  1 	 Timestamp:  1525477925972
+	Symbol:  GLD 	 Bid: 124.56 	 Ask:  124.6 	 BidExch:  11 	 AskExch:  8 	 BidSize:  1 	 AskSize:  1 	 Timestamp:  1525477925986
+	Symbol:  DIS 	 Bid: 101.25 	 Ask:  101.45 	 BidExch:  8 	 AskExch:  11 	 BidSize:  2 	 AskSize:  2 	 Timestamp:  1525477926146
+	Symbol:  DIS 	 Bid: 101.37 	 Ask:  101.45 	 BidExch:  8 	 AskExch:  11 	 BidSize:  7 	 AskSize:  2 	 Timestamp:  1525477926147
+	Symbol:  SQQQ 	 Bid: 16.32 	 Ask:  16.34 	 BidExch:  11 	 AskExch:  11 	 BidSize:  3 	 AskSize:  64 	 Timestamp:  1525477927478
+	Symbol:  NVDA 	 Bid: 239.85 	 Ask:  239.99 	 BidExch:  11 	 AskExch:  12 	 BidSize:  5 	 AskSize:  6 	 Timestamp:  1525477927637
+	Symbol:  DBX 	 Bid: 29.22 	 Ask:  29.25 	 BidExch:  11 	 AskExch:  8 	 BidSize:  3 	 AskSize:  8 	 Timestamp:  1525477927897
+	Symbol:  MU 	 Bid: 47.63 	 Ask:  47.65 	 BidExch:  11 	 AskExch:  8 	 BidSize:  10 	 AskSize:  19 	 Timestamp:  1525477928608
+
+#### Streaming Trades:
+
 	polygon-cli stream --channel T.*
+	Symbol:  LB 	 Price: 34.6 	 Size:  50 	 Exchange:  8 	 Timestamp:  1525478065420 	 Conditions:  [14 12 37]
+	Symbol:  CHK 	 Price: 3.02 	 Size:  527 	 Exchange:  11 	 Timestamp:  1525478066537 	 Conditions:  [14 12]
+	Symbol:  CHK 	 Price: 3.02 	 Size:  173 	 Exchange:  11 	 Timestamp:  1525478066537 	 Conditions:  [12]
+	Symbol:  TVIX 	 Price: 6.79 	 Size:  250 	 Exchange:  4 	 Timestamp:  1525478067693 	 Conditions:  [12]
+	Symbol:  BAC 	 Price: 29.3 	 Size:  50 	 Exchange:  12 	 Timestamp:  1525478068963 	 Conditions:  [12 37]
+	Symbol:  KOPN 	 Price: 3.45 	 Size:  2000 	 Exchange:  4 	 Timestamp:  1525478070234 	 Conditions:  [12]
+	Symbol:  SZC 	 Price: 17.55 	 Size:  1500 	 Exchange:  11 	 Timestamp:  1525478070592 	 Conditions:  [14 12]
+	Symbol:  AMD 	 Price: 11.3 	 Size:  100 	 Exchange:  4 	 Timestamp:  1525478071810 	 Conditions:  [12]
+	Symbol:  BRK.B 	 Price: 195.7 	 Size:  15 	 Exchange:  4 	 Timestamp:  1525478072398 	 Conditions:  [12 37]
+	Symbol:  FB 	 Price: 176.7 	 Size:  35 	 Exchange:  11 	 Timestamp:  1525478073429 	 Conditions:  [12 37]
+	Symbol:  AAPL 	 Price: 184.05 	 Size:  747 	 Exchange:  12 	 Timestamp:  1525478073487 	 Conditions:  [14 12]
+	Symbol:  KHC 	 Price: 58.17 	 Size:  60 	 Exchange:  4 	 Timestamp:  1525478074297 	 Conditions:  [12 37]
+	Symbol:  GPRO 	 Price: 5.45 	 Size:  1000 	 Exchange:  11 	 Timestamp:  1525478075956 	 Conditions:  [14 12]
+
+
 
 # Metadata 
 
