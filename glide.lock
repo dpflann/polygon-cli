@@ -1,5 +1,5 @@
 hash: 130f2b86a4e8891fda3053638d9c97914af2360a4b87f14479267d4f59e1d946
-updated: 2018-05-04T23:05:57.245299-04:00
+updated: 2018-05-05T19:21:37.81181-04:00
 imports:
 - name: github.com/fsnotify/fsnotify
   version: c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9
@@ -43,7 +43,7 @@ imports:
 - name: github.com/pkg/errors
   version: ff09b135c25aae272398c51a07235b90a75aa4f0
 - name: github.com/polygon-io/go-schemas
-  version: e722725bf2c4c79e81f3cd0b500b93157994288d
+  version: c6978954dc4ca8f87f1f67563760f3ddfd8972de
 - name: github.com/spf13/afero
   version: 63644898a8da0bc22138abf860edaf5277b6102e
   subpackages:

@@ -133,6 +133,31 @@ You can stream channels:
 
 
 
+#### Get Symbol Dividends
+
+	polygon-cli dividends --symbol MFST
+	        REPORT DATE        |             KEY             |          VALUE            
+	+--------------------------+-----------------------------+--------------------------+
+	  2018-02-14T00:00:00.000Z | Execution Date              | 2018-02-14T00:00:00.000Z  
+	                           | Type                        |          Dividend income  
+	                           | Payment Date                | 2018-03-08T00:00:00.000Z  
+	                           | Record Date                 | 2018-02-15T00:00:00.000Z  
+	                           | Declared Date               | 2017-11-29T00:00:00.000Z  
+	                           | Amount                      |                 0.420000  
+	                           | Qualified                   |                        Q  
+	                           | Flag                        |                           
+	  ---------                | --------------------------- |       ------------------  
+	  2017-11-15T00:00:00.000Z | Execution Date              | 2017-11-15T00:00:00.000Z  
+	                           | Type                        |          Dividend income  
+	                           | Payment Date                | 2017-12-14T00:00:00.000Z  
+	                           | Record Date                 | 2017-11-16T00:00:00.000Z  
+	                           | Declared Date               | 2017-09-19T00:00:00.000Z  
+	                           | Amount                      |                 0.420000  
+	                           | Qualified                   |                        Q  
+	                           | Flag                        |                           
+
+
+
 #### Get Exchanges
 
 	polygon-cli exchanges

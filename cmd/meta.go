@@ -88,7 +88,7 @@ var symbolFinancialsCmd = &cobra.Command{
 		table := tablewriter.NewWriter(os.Stdout)
 		table.SetColWidth( 60 )
 		table.SetBorder(false)
-		table.SetHeader([]string{"Report Date", "Type", "Value"})
+		table.SetHeader([]string{"Report Date", "Key", "Value"})
 		for _, fin := range financials {
 			table.Append([]string{ fin.ReportDate, "Gross Profit", ac.FormatMoney( fin.GrossProfit ) })
 			table.Append([]string{ "", "Cost of Revenue", ac.FormatMoney( fin.CostOfRevenue ) })
@@ -130,7 +130,7 @@ var symbolEarningsCmd = &cobra.Command{
 		table.SetColWidth( 60 )
 		table.SetBorder(false)
 		table.SetColumnAlignment([]int{ tablewriter.ALIGN_LEFT, tablewriter.ALIGN_LEFT, tablewriter.ALIGN_RIGHT })
-		table.SetHeader([]string{"Report Date", "Type", "Value"})
+		table.SetHeader([]string{"Report Date", "Key", "Value"})
 		for _, fin := range earnings {
 			table.Append([]string{ fin.EPSReportDateStr, "Fiscal Period", fin.FiscalPeriod })
 			table.Append([]string{ "", "Fiscal End Date", fin.FiscalEndDate })
@@ -153,13 +153,48 @@ var symbolEarningsCmd = &cobra.Command{
 }
 
 
+
+var symbolDividendsCmd = &cobra.Command{
+	Use: "dividends",
+	Short: "Get the dividends for a symbol",
+	Run: func(cmd *cobra.Command, args []string) {
+		if len(metaCmdOps.Symbol) == 0 {
+			log.Fatal("ERROR: Please enter a symbol. eg: --symbol=MSFT")
+		}
+		var dividends []schemas.Dividend
+		getUrl( "https://api.polygon.io/v1/meta/symbols/"+metaCmdOps.Symbol+"/dividends", &dividends )
+		table := tablewriter.NewWriter(os.Stdout)
+		table.SetColWidth( 60 )
+		table.SetBorder(false)
+		table.SetColumnAlignment([]int{ tablewriter.ALIGN_LEFT, tablewriter.ALIGN_LEFT, tablewriter.ALIGN_RIGHT })
+		table.SetHeader([]string{"Execution Date", "Key", "Value"})
+		for _, fin := range dividends {
+			table.Append([]string{ fin.ExDate, "Execution Date", fin.ExDate })
+			table.Append([]string{ "", "Type", fin.Type })
+			table.Append([]string{ "", "Payment Date", fin.PaymentDate })
+			table.Append([]string{ "", "Record Date", fin.RecordDate })
+			table.Append([]string{ "", "Declared Date", fin.DeclaredDate })
+			table.Append([]string{ "", "Amount", fmt.Sprintf("%.6f", fin.Amount ) })
+			table.Append([]string{ "", "Qualified", fin.Qualified })
+			table.Append([]string{ "", "Flag", fin.Flag })
+			table.Append([]string{ "---------", "---------------------------", "------------------" })
+		}
+		println("")
+		table.Render()
+		println("")
+	},
+}
+
+
 func init() {
 	RootCmd.AddCommand(exchangesCmd)
 	RootCmd.AddCommand(symbolTypesCmd)
 	RootCmd.AddCommand(symbolFinancialsCmd)
 	RootCmd.AddCommand(symbolEarningsCmd)
+	RootCmd.AddCommand(symbolDividendsCmd)
 	symbolFinancialsCmd.Flags().StringVar(&metaCmdOps.Symbol, "symbol", "", "Symbol eg: MSFT")
 	symbolEarningsCmd.Flags().StringVar(&metaCmdOps.Symbol, "symbol", "", "Symbol eg: MSFT")
+	symbolDividendsCmd.Flags().StringVar(&metaCmdOps.Symbol, "symbol", "", "Symbol eg: MSFT")
 }
 
 func prettyprint(b []byte) ([]byte, error) {
