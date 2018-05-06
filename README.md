@@ -1,7 +1,7 @@
 # Polygon CLI
 CLI For simple Polygon.io functions.
 
-Required args:
+*Required args:*
 
 	--apiKey=YOUR_API_KEY
 
@@ -27,11 +27,6 @@ You can stream channels:
 	Symbol:  GUSH 	 Bid: 32.9 	 Ask:  33.24 	 BidExch:  8 	 AskExch:  8 	 BidSize:  7 	 AskSize:  1 	 Timestamp:  1525477925972
 	Symbol:  GLD 	 Bid: 124.56 	 Ask:  124.6 	 BidExch:  11 	 AskExch:  8 	 BidSize:  1 	 AskSize:  1 	 Timestamp:  1525477925986
 	Symbol:  DIS 	 Bid: 101.25 	 Ask:  101.45 	 BidExch:  8 	 AskExch:  11 	 BidSize:  2 	 AskSize:  2 	 Timestamp:  1525477926146
-	Symbol:  DIS 	 Bid: 101.37 	 Ask:  101.45 	 BidExch:  8 	 AskExch:  11 	 BidSize:  7 	 AskSize:  2 	 Timestamp:  1525477926147
-	Symbol:  SQQQ 	 Bid: 16.32 	 Ask:  16.34 	 BidExch:  11 	 AskExch:  11 	 BidSize:  3 	 AskSize:  64 	 Timestamp:  1525477927478
-	Symbol:  NVDA 	 Bid: 239.85 	 Ask:  239.99 	 BidExch:  11 	 AskExch:  12 	 BidSize:  5 	 AskSize:  6 	 Timestamp:  1525477927637
-	Symbol:  DBX 	 Bid: 29.22 	 Ask:  29.25 	 BidExch:  11 	 AskExch:  8 	 BidSize:  3 	 AskSize:  8 	 Timestamp:  1525477927897
-	Symbol:  MU 	 Bid: 47.63 	 Ask:  47.65 	 BidExch:  11 	 AskExch:  8 	 BidSize:  10 	 AskSize:  19 	 Timestamp:  1525477928608
 
 #### Streaming Trades:
 
@@ -195,7 +190,7 @@ You can stream channels:
 #### Get Crypto Exchanges
 
 	polygon-cli cryptoexchanges
-	
+
 	  ID |    NAME    |   TYPE   | MARKET |                URL                  
 	+----+------------+----------+--------+------------------------------------+
 	   1 | GDAX       | exchange | crypto | https://www.gdax.com/               
