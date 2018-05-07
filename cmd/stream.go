@@ -42,7 +42,13 @@ var streamCmd = &cobra.Command{
 		// Currencies:
 		if strings.Contains(streamCmdOps.Channel, "C.") {
 			encodedConnection.Subscribe(streamCmdOps.Channel, func( tick *schemas.Forex){
-				fmt.Println("Currency Tick:", tick)
+				fmt.Println(
+					"Pair:", tick.Pair, 
+					"\t Exchange:", tick.Exchange, 
+					"\t Timestamp:", tick.Timestamp,
+					"\t Ask:", tick.Ask, 
+					"\t\t Bid:", tick.Bid,
+				)
 			})
 		}
 		// Trades:

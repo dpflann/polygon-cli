@@ -46,6 +46,21 @@ You can stream channels:
 	Symbol:  GPRO 	 Price: 5.45 	 Size:  1000 	 Exchange:  11 	 Timestamp:  1525478075956 	 Conditions:  [14 12]
 
 
+#### Streaming Currencies:
+
+	polygon-cli stream --channel C.*
+	Pair: USD/AUD 	 Exchange: 44 	 Timestamp: 1525668109221 	 Ask: 1.32864 		 Bid: 1.32866
+	Pair: USD/NZD 	 Exchange: 44 	 Timestamp: 1525668109222 	 Ask: 1.42328 		 Bid: 1.42337
+	Pair: EUR/CAD 	 Exchange: 60 	 Timestamp: 1525668109208 	 Ask: 1.53756 		 Bid: 1.53731
+	Pair: EUR/CZK 	 Exchange: 60 	 Timestamp: 1525668109185 	 Ask: 25.50272 		 Bid: 25.46885
+	Pair: GBP/CHF 	 Exchange: 60 	 Timestamp: 1525668108999 	 Ask: 1.35449 		 Bid: 1.3542
+	Pair: USD/MXN 	 Exchange: 60 	 Timestamp: 1525668109212 	 Ask: 19.2368 		 Bid: 19.22815
+	Pair: GBP/CAD 	 Exchange: 60 	 Timestamp: 1525668109128 	 Ask: 1.74173 		 Bid: 1.74136
+	Pair: CAD/JPY 	 Exchange: 60 	 Timestamp: 1525668109202 	 Ask: 84.896 		 Bid: 84.877
+	Pair: GBP/NZD 	 Exchange: 60 	 Timestamp: 1525668109202 	 Ask: 1.92902 		 Bid: 1.92847
+	Pair: AUD/EUR 	 Exchange: 44 	 Timestamp: 1525668109236 	 Ask: 0.629152 		 Bid: 0.629176
+
+
 
 # Metadata 
 
